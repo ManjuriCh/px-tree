@@ -163,6 +163,8 @@ Custom property | Description
           }
         });
       });
+      this.$.expand.classList.add('actionable--disabled');
+      this.$.collapse.classList.remove('actionable--disabled');
     },
     /**
      * When collapsing all the tree items on Collapse All click
@@ -210,6 +212,8 @@ Custom property | Description
           }
         });
       });
+      this.$.expand.classList.remove('actionable--disabled');
+      this.$.collapse.classList.add('actionable--disabled');
     },
     /**
      * Escaping special characters when filtering the tree items
