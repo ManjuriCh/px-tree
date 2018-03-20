@@ -47,7 +47,7 @@ Custom property | Description
           is-selected="[[_isItemSelected(selected, item, multiSelect, selected.*)]]" active="[[active]]" active-meta="[[activeMeta]]"
           selected="[[selected]]" can-open="[[_hasChildren(item, _assetGraph, _childrenUpdated)]]" disable-branch-select="[[disableBranchSelect]]"
           multi-select="[[multiSelect]]" multi-activate="[[multiActivate]]" icon="[[_getItemProp(item, keys.icon)]]" non-ge-part="{{_getItemProp(item, keys.nonGePart)}}"
-          missing-parts="{{_getItemProp(item, keys.missingParts)}}" mismatch-parts="{{_getItemProp(item, keys.mismatchParts)}}"
+          missing-part="{{_getItemProp(item, keys.missingPart)}}" quantity-mismatch="{{_getItemProp(item, keys.quantityMismatch)}}"
           alternate-parts="{{_getItemProp(item, keys.alternateParts)}}" children-updated="[[_childrenUpdated]]" asset-graph="[[_assetGraph]]">
         </px-tree-node>
       </template>

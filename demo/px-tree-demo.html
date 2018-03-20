@@ -114,8 +114,8 @@
           'children': 'children',
           'icon': 'icon',
           'nonGePart': 'nonGePart',
-          'missingParts': 'missingParts',
-          'mismatchParts': 'mismatchParts',
+          'missingPart': 'missingPart',
+          'quantityMismatch': 'quantityMismatch',
           'alternateParts': 'alternateParts'
         },
         inputType: 'code:JSON',
@@ -125,28 +125,32 @@
         type: Array,
         defaultValue: [{
             "label": "Leaf 0.0",
-            "id": "leaf-0-0"
+            "id": "leaf-0-0",
+            "nonGePart": true,
+            "missingPart": true,
+            "quantityMismatch": true,
+            "alternateParts": true
           }, {
             "label": "Leaf 0.1",
             "id": "leaf-0-1",
             "nonGePart": true,
-            "missingParts": true,
-            "mismatchParts": true,
+            "missingPart": true,
+            "quantityMismatch": true,
             "alternateParts": true
           }, {
             "label": "Leaf 0.2",
             "id": "leaf-0-2",
             "nonGePart": true,
-            "missingParts": true,
-            "mismatchParts": true,
+            "missingPart": true,
+            "quantityMismatch": true,
             "alternateParts": true
           },
           {
             "label": "Branch 0.3",
             "id": "branch-0-3",
             "nonGePart": true,
-            "missingParts": true,
-            "mismatchParts": true,
+            "missingPart": true,
+            "quantityMismatch": true,
             "alternateParts": true,
             "children": [{
               "label": "Leaf 1.0",
@@ -155,36 +159,36 @@
               "label": "Branch 1.1",
               "id": "branch-1-1",
               "nonGePart": true,
-              "missingParts": true,
-              "mismatchParts": true,
+              "missingPart": true,
+              "quantityMismatch": true,
               "alternateParts": true,
               "children": [{
                 "label": "Leaf 2.0",
                 "id": "leaf-2-0",
                 "nonGePart": true,
-                "missingParts": true,
-                "mismatchParts": true,
+                "missingPart": true,
+                "quantityMismatch": true,
                 "alternateParts": true
               }, {
                 "label": "Leaf 2.1",
                 "id": "leaf-2-1",
                 "nonGePart": true,
-                "missingParts": true,
-                "mismatchParts": true,
+                "missingPart": true,
+                "quantityMismatch": true,
                 "alternateParts": true
               }, {
                 "label": "Leaf 2.2",
                 "id": "leaf-2-2",
                 "nonGePart": true,
-                "missingParts": true,
-                "mismatchParts": true,
+                "missingPart": true,
+                "quantityMismatch": true,
                 "alternateParts": true
               }, {
                 "label": "Leaf 2.3",
                 "id": "leaf-2-3",
                 "nonGePart": true,
-                "missingParts": true,
-                "mismatchParts": true,
+                "missingPart": true,
+                "quantityMismatch": true,
                 "alternateParts": true
               }]
             }, {
