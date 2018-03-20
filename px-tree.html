@@ -117,6 +117,9 @@ Custom property | Description
         notify: true
       }
     },
+    ready: function () {
+      this.$.collapse.classList.add('actionable--disabled');
+    },
     /**
      * When expanding all the tree items on Expand All click
      * the method is invoked.
