@@ -245,6 +245,7 @@ Custom property | Description
       }
       var matchedValue = this._filterMatchedNodes(ev.target.value, this._orignalItems);
       this.set('items', matchedValue);
+      this.$.expand.classList.remove('actionable--disabled');
     },
     _filterMatchedNodes: function (str, nodes) {
       var self = this;
