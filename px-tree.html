@@ -229,7 +229,7 @@ Custom property | Description
      */
     _isMatchedNode: function (str, node) {
       // if (this._escapeStringRegExp(str).test(node.label) || this._escapeStringRegExp(str).test(node.name) ||
-      if (this._escapeStringRegExp(str).test(node.label) || this._escapeStringRegExp(str).test(node.name) ||
+      if (this._escapeStringRegExp(str).test(node.name) ||
         (
           node.metadata && this._escapeStringRegExp(str).test(
             node.metadata))) {
@@ -244,16 +244,13 @@ Custom property | Description
       if (!this._orignalItems) {
         this.set('_orignalItems', this.items);
       }
-      var matchedValue = this._filterMatchedNodes(ev.target.value, this._orignalItems);
-      this.set('items', matchedValue);
       this.$.expand.classList.remove('actionable--disabled');
-      var that = this;
-      // setTimeout(function () {
-      //   var matchedValue = that._filterMatchedNodes(ev.target.value, this._orignalItems);
-      //   this.set('items', matchedValue);
-      // }, 100);
-      setTimeout(function () {
-        that._activateAll();
+      setTimeout(() => {
+        var matchedValue = this._filterMatchedNodes(ev.target.value, this._orignalItems);
+        this.set('items', matchedValue);
+      }, 100);
+      setTimeout(() => {
+        this._activateAll();
       }, 100);
     },
     _filterMatchedNodes: function (str, nodes) {
