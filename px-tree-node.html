@@ -5,6 +5,7 @@
 <link rel="import" href="../px-tooltip/px-tooltip.html" />
 <link rel="import" href="px-tree-behavior.html" />
 <link rel="import" href="css/px-tree-styles.html">
+<link rel="import" href="../iron-icons/iron-icons.html" />
 
 <dom-module id="px-tree-node">
   <template>
@@ -13,7 +14,7 @@
     <template is="dom-if" if="[[canOpen]]">
       <li class$="tree__branch [[_getClass(isActive, isSelected, item, assetGraph)]]">
         <span class="tree-branch-icon">
-          <px-icon id="branchPart" class="branch-icon non-ge-part" icon="px-nav:unconfirmed" hidden$="{{nonGePart}}"></px-icon>
+          <px-icon id="branchPart" class="branch-icon non-ge-part" icon="icons:block" hidden$="{{nonGePart}}"></px-icon>
           <px-icon id="branchMissing" class="branch-icon missing-part" icon="px-utl:app-settings" hidden$="{{missingPart}}"></px-icon>
           <px-icon id="branchMismatch" class="branch-icon quantity-mismatch" icon="px-utl:failure" hidden$="{{quantityMismatch}}"></px-icon>
           <px-icon id="branchAlternate" class="branch-icon alternate-part" icon="px-utl:flag" hidden$="{{alternateParts}}"></px-icon>
@@ -47,7 +48,7 @@
     <template is="dom-if" if="[[!canOpen]]">
       <li class$="tree__leaf [[_getClass(isActive, isSelected, item, assetGraph)]]">
         <span class="leaf-branch-icon">
-          <px-icon id="branchPart" class="branch-icon non-ge-part" icon="px-nav:unconfirmed" hidden$="{{nonGePart}}"></px-icon>
+          <px-icon id="branchPart" class="branch-icon non-ge-part" icon="icons:block" hidden$="{{nonGePart}}"></px-icon>
           <px-icon id="branchMissing" class="branch-icon missing-part" icon="px-utl:app-settings" hidden$="{{missingPart}}"></px-icon>
           <px-icon id="branchMismatch" class="branch-icon quantity-mismatch" icon="px-utl:failure" hidden$="{{quantityMismatch}}"></px-icon>
           <px-icon id="branchAlternate" class="branch-icon alternate-part" icon="px-utl:flag" hidden$="{{alternateParts}}"></px-icon>
