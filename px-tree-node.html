@@ -8,6 +8,7 @@
 <link rel="import" href="../iron-icons/iron-icons.html" />
 
 <dom-module id="px-tree-node">
+
   <template>
     <style include="px-tree-styles"></style>
 
@@ -21,6 +22,7 @@
         </span>
         <span class="tree-branch-label">
           <px-icon class="chevron" icon="[[_getIcon(isActive)]]"></px-icon>
+
           <template is="dom-if" if="[[icon]]">
             <px-icon class="icon" icon="[[icon]]"></px-icon>
           </template>
@@ -28,13 +30,16 @@
           <px-icon id="branchItem" class="icon link-icon" icon="px-nav:new-window" on-tap="_action"></px-icon>
           <px-tooltip for="branchItem" tooltip-message="View details" orientation="right"></px-tooltip>
           <span class="description description-font" style="display: block;" hidden$="[[hideDescription]]">[[description]]</span>
+          <span class="alternate-font">[[alternate]]</span>
         </span>
       </li>
       <iron-collapse id="collapse" opened$="[[isActive]]">
         <div class="collapse-content">
+
           <template is="dom-repeat" items="[[items]]" as="subitem">
-            <px-tree-node label="[[_getItemProp(subitem, keys.label)]]" description="[[_metaDataArray(subitem, keys.metadata)]]" items="[[_getChildren(subitem, assetGraph, childrenUpdated)]]"
-              item="[[subitem]]" keys="[[keys]]" active="[[active]]" active-meta="[[activeMeta]]" selected="[[selected]]" is-active="[[_isItemActive(active, activeMeta, subitem, multiActivate, active.*)]]"
+            <px-tree-node label="[[_getItemProp(subitem, keys.label)]]" description="[[_metaDataArray(subitem, keys.metadata)]]" alternate="[[_alternateTemplateArray(subitem, keys.alternateTemplate)]]"
+              items="[[_getChildren(subitem, assetGraph, childrenUpdated)]]" item="[[subitem]]" keys="[[keys]]" active="[[active]]"
+              active-meta="[[activeMeta]]" selected="[[selected]]" is-active="[[_isItemActive(active, activeMeta, subitem, multiActivate, active.*)]]"
               is-selected="[[_isItemSelected(selected, subitem, multiSelect, selected.*)]]" can-open="[[_hasChildren(subitem, assetGraph, childrenUpdated)]]"
               disable-branch-select="[[disableBranchSelect]]" multi-select="[[multiSelect]]" multi-activate="[[multiActivate]]"
               icon="[[_getItemProp(subitem, keys.icon)]]" non-ge-part="{{_getItemProp(subitem, keys.nonGePart)}}" missing-part="{{_getItemProp(subitem, keys.missingPart)}}"
@@ -45,6 +50,7 @@
         </div>
       </iron-collapse>
     </template>
+
     <template is="dom-if" if="[[!canOpen]]">
       <li class$="tree__leaf [[_getClass(isActive, isSelected, item, assetGraph)]]">
         <span class="leaf-branch-icon">
@@ -55,6 +61,7 @@
 
         </span>
         <span class="leaf-branch-label">
+
           <template is="dom-if" if="[[icon]]">
             <px-icon class="icon" icon="[[icon]]"></px-icon>
           </template>
@@ -63,6 +70,7 @@
           <px-tooltip for="leafItem" tooltip-message="View details" orientation="right">
           </px-tooltip>
           <span class="description-font" style="display: block;" hidden$="[[hideDescription]]">[[description]]</span>
+          <span class="alternate-font">[[alternate]]</span>
         </span>
       </li>
 
@@ -96,6 +104,14 @@
        * Pulled from the `item` object for this node.
        */
       description: {
+        type: String,
+        value: ''
+      },
+      /**
+       * Alternate to display in the body of the node.
+       * Pulled from the `item` object for this node.
+       */
+      alternate: {
         type: String,
         value: ''
       },
@@ -134,6 +150,13 @@
        * Pulled from the `item` object for this node.
        */
       metadata: {
+        type: Array,
+        value: function () {
+          return [];
+        }
+      },
+
+      alternateTemplate: {
         type: Array,
         value: function () {
           return [];
@@ -245,6 +268,7 @@
         notify: true,
         observer: '_hidePartsIcon'
       }
+
     },
     /**
      * Fired when the tree link icon is tapped by user

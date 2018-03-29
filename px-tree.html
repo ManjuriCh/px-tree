@@ -30,6 +30,7 @@ Custom property | Description
 -->
 
 <dom-module id="px-tree">
+
   <template>
     <style include="px-tree-styles"></style>
 
@@ -41,9 +42,11 @@ Custom property | Description
       <span id="collapse" class="actionable" on-tap="_deactivateAll">Collapse All</span>
     </div>
     <ul>
+
       <template is="dom-repeat" items="[[__rootItems]]">
         <px-tree-node id="treeNode" label="[[_getItemProp(item, keys.label)]]" description="[[_metaDataArray(item, keys.metadata)]]"
-          items="[[_getChildren(item, _assetGraph, _childrenUpdated)]]" item="[[item]]" keys="[[keys]]" is-active="[[_isItemActive(active, activeMeta, item, multiActivate, active.*)]]"
+          alternate="[[_alternateTemplateArray(item, keys.alternateTemplate)]]" items="[[_getChildren(item, _assetGraph, _childrenUpdated)]]"
+          item="[[item]]" keys="[[keys]]" is-active="[[_isItemActive(active, activeMeta, item, multiActivate, active.*)]]"
           is-selected="[[_isItemSelected(selected, item, multiSelect, selected.*)]]" active="[[active]]" active-meta="[[activeMeta]]"
           selected="[[selected]]" can-open="[[_hasChildren(item, _assetGraph, _childrenUpdated)]]" disable-branch-select="[[disableBranchSelect]]"
           multi-select="[[multiSelect]]" multi-activate="[[multiActivate]]" icon="[[_getItemProp(item, keys.icon)]]" non-ge-part="{{_getItemProp(item, keys.nonGePart)}}"
@@ -228,8 +231,7 @@ Custom property | Description
      * Filtering the tree items based on the search string entered in the tree input
      */
     _isMatchedNode: function (str, node) {
-      // if (this._escapeStringRegExp(str).test(node.name) ||
-      if (this._escapeStringRegExp(str).test(node.label) || this._escapeStringRegExp(str).test(node.name) ||
+      if (this._escapeStringRegExp(str).test(node.name) || this._escapeStringRegExp(str).test(node.label) ||
         (
           node.metadata && this._escapeStringRegExp(str).test(
             node.metadata))) {
@@ -247,10 +249,6 @@ Custom property | Description
       this.$.expand.classList.remove('actionable--disabled');
       var matchedValue = this._filterMatchedNodes(ev.target.value, this._orignalItems);
       this.set('items', matchedValue);
-      // setTimeout(() => {
-      //   var matchedValue = this._filterMatchedNodes(ev.target.value, this._orignalItems);
-      //   this.set('items', matchedValue);
-      // }, 100);
       setTimeout(() => {
         this._activateAll();
       }, 100);

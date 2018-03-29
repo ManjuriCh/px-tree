@@ -116,7 +116,8 @@
           'nonGePart': 'nonGePart',
           'missingPart': 'missingPart',
           'quantityMismatch': 'quantityMismatch',
-          'alternateParts': 'alternateParts'
+          'alternateTemplate': 'alternateTemplate'
+
         },
         inputType: 'code:JSON',
         inputHelpText: '"Keys" defines the configuration for "Items"'
@@ -129,21 +130,42 @@
             "nonGePart": true,
             "missingPart": true,
             "quantityMismatch": true,
-            "alternateParts": true
+            "alternateParts": true,
+            "metadata": [
+              "P 12345",
+              "S 12345-1234-1234",
+              "Q 1"
+            ],
+            "alternateTemplate": [
+              "alternate 1",
+              "alternate 2",
+              "alternate 3"
+            ]
           }, {
             "label": "Leaf 0.1",
             "id": "leaf-0-1",
             "nonGePart": true,
             "missingPart": true,
             "quantityMismatch": true,
-            "alternateParts": true
+            "alternateParts": true,
+            "metadata": [
+              "P 12345",
+              "S 12345-1234-1234",
+              "Q 1"
+            ],
+            "alternateTemplate": [
+              "alternate 4",
+              "alternate 5",
+              "alternate 6"
+            ]
           }, {
             "label": "Leaf 0.2",
             "id": "leaf-0-2",
             "nonGePart": true,
             "missingPart": true,
             "quantityMismatch": true,
-            "alternateParts": true
+            "alternateParts": true,
+            "alternateTemplate": null
           },
           {
             "label": "Branch 0.3",
@@ -154,7 +176,17 @@
             "alternateParts": true,
             "children": [{
               "label": "Leaf 1.0",
-              "id": "leaf-1-0"
+              "id": "leaf-1-0",
+              "metadata": [
+                "P 12345",
+                "S 12345-1234-1234",
+                "Q 1"
+              ],
+              "alternateTemplate": [
+                "alternate 1",
+                "alternate 2",
+                "alternate 3"
+              ]
             }, {
               "label": "Branch 1.1",
               "id": "branch-1-1",
@@ -199,7 +231,9 @@
               "id": "branch-1-3",
               "children": [{
                 "label": "Leaf 2.0",
-                "id": "leaf-2-0"
+                "id": "leaf-2-0",
+                "metadata": [],
+                "alternateTemplate": []
               }, {
                 "label": "Leaf 2.1",
                 "id": "leaf-2-1"
@@ -217,7 +251,17 @@
                 "id": "leaf-2-5"
               }, {
                 "label": "Leaf 2.6",
-                "id": "leaf-2-6"
+                "id": "leaf-2-6",
+                "metadata": [
+                  "P 12345",
+                  "S 12345-1234-1234",
+                  "Q 1"
+                ],
+                "alternateTemplate": [
+                  "alternate 1",
+                  "alternate 2",
+                  "alternate 3"
+                ]
               }, {
                 "label": "Leaf 2.7",
                 "id": "leaf-2-7"
@@ -236,7 +280,17 @@
               "id": "branch-1-6",
               "children": [{
                 "label": "Leaf 2.0",
-                "id": "leaf-2-0"
+                "id": "leaf-2-0",
+                "metadata": [
+                  "P 12345",
+                  "S 12345-1234-1234",
+                  "Q 1"
+                ],
+                "alternateTemplate": [
+                  "alternate 1",
+                  "alternate 2",
+                  "alternate 3"
+                ]
               }, {
                 "label": "Leaf 2.1",
                 "id": "leaf-2-1"
@@ -260,7 +314,8 @@
                 "id": "leaf-2-7"
               }, {
                 "label": "Leaf 2.8",
-                "id": "leaf-2-8"
+                "id": "leaf-2-8",
+                "alternateTemplate": []
               }, {
                 "label": "Leaf 2.9",
                 "id": "leaf-2-9"

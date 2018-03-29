@@ -56,6 +56,20 @@
       },
 
       /**
+       * Fetches an item's alternate template property at the configured key. Used to dynamically
+       * fetch the item's label, icon, children, etc. based on the configured
+       * `keys` for the app. This property will display all the metadata information with a pipe.
+       */
+
+      _alternateTemplateArray(item, key) {
+        if (item.alternateTemplate) {
+          var localMetaData = item.alternateTemplate.toString();
+          localMetaData = localMetaData.split(",").join(" | ");
+          item.alternateTemplate = localMetaData;
+          return item[key];
+        }
+      },
+      /**
        * Calculates whether the specified item is present in the active path.
        */
       _isItemActive: function (active, activeMeta, item, multiActivate) {
