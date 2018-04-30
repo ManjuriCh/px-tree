@@ -31,6 +31,7 @@
           <px-tooltip for="branchItem" tooltip-message="View details" orientation="right"></px-tooltip>
           <span class="description description-font description-block" hidden$="[[hideDescription]]">[[description]]</span>
           <span class="alternate-font alternate-branch">[[alternate]]</span>
+          <span class="alternate-font alternate-branch">[[alternateOf]]</span>
         </span>
       </li>
       <iron-collapse id="collapse" opened$="[[isActive]]">
@@ -38,8 +39,8 @@
 
           <template is="dom-repeat" items="[[items]]" as="subitem">
             <px-tree-node label="[[_getItemProp(subitem, keys.label)]]" description="[[_metaDataArray(subitem, keys.metadata)]]" alternate="[[_alternateTemplateArray(subitem, keys.alternateTemplate)]]"
-              items="[[_getChildren(subitem, assetGraph, childrenUpdated)]]" item="[[subitem]]" keys="[[keys]]" active="[[active]]"
-              active-meta="[[activeMeta]]" selected="[[selected]]" is-active="[[_isItemActive(active, activeMeta, subitem, multiActivate, active.*)]]"
+              alternate-of="[[_alternateOfArray(subitem, keys.alternateOfTemplate)]]" items="[[_getChildren(subitem, assetGraph, childrenUpdated)]]"
+              item="[[subitem]]" keys="[[keys]]" active="[[active]]" active-meta="[[activeMeta]]" selected="[[selected]]" is-active="[[_isItemActive(active, activeMeta, subitem, multiActivate, active.*)]]"
               is-selected="[[_isItemSelected(selected, subitem, multiSelect, selected.*)]]" can-open="[[_hasChildren(subitem, assetGraph, childrenUpdated)]]"
               disable-branch-select="[[disableBranchSelect]]" multi-select="[[multiSelect]]" multi-activate="[[multiActivate]]"
               icon="[[_getItemProp(subitem, keys.icon)]]" non-ge-part="{{_getItemProp(subitem, keys.nonGePart)}}" missing-part="{{_getItemProp(subitem, keys.missingPart)}}"
@@ -71,6 +72,7 @@
           </px-tooltip>
           <span class="description-font description-block" hidden$="[[hideDescription]]">[[description]]</span>
           <span class="alternate-font alternate-leaf">[[alternate]]</span>
+          <span class="alternate-font alternate-leaf">[[alternateOf]]</span>
         </span>
       </li>
 
@@ -116,6 +118,14 @@
         value: ''
       },
       /**
+       * Alternate of to display in the body of the node.
+       * Pulled from the `item` object for this node.
+       */
+      alternateOf: {
+        type: String,
+        value: ''
+      },
+      /**
        * Whether or not the node can be expanded to display children.
        * Calculated from the `item` object for this node.
        */
@@ -157,6 +167,12 @@
       },
 
       alternateTemplate: {
+        type: Array,
+        value: function () {
+          return [];
+        }
+      },
+      alternateOfTemplate: {
         type: Array,
         value: function () {
           return [];

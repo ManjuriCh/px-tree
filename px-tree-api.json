@@ -35,11 +35,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 87,
+              "line": 99,
               "column": 6
             },
             "end": {
-              "line": 90,
+              "line": 102,
               "column": 7
             }
           },
@@ -55,11 +55,51 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 107,
               "column": 6
             },
             "end": {
-              "line": 98,
+              "line": 110,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"\""
+        },
+        {
+          "name": "alternate",
+          "type": "string",
+          "description": "Alternate to display in the body of the node.\nPulled from the `item` object for this node.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 115,
+              "column": 6
+            },
+            "end": {
+              "line": 118,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"\""
+        },
+        {
+          "name": "alternateOfTemplate",
+          "type": "string",
+          "description": "Alternate of to display in the body of the node.\nPulled from the `item` object for this node.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 123,
+              "column": 6
+            },
+            "end": {
+              "line": 126,
               "column": 7
             }
           },
@@ -75,11 +115,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 103,
+              "line": 131,
               "column": 6
             },
             "end": {
-              "line": 106,
+              "line": 134,
               "column": 7
             }
           },
@@ -95,11 +135,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 112,
+              "line": 140,
               "column": 6
             },
             "end": {
-              "line": 117,
+              "line": 145,
               "column": 7
             }
           },
@@ -115,11 +155,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 123,
+              "line": 151,
               "column": 6
             },
             "end": {
-              "line": 128,
+              "line": 156,
               "column": 7
             }
           },
@@ -131,15 +171,55 @@
         {
           "name": "metadata",
           "type": "Array",
+          "description": "The array of metadata items associated with this px-tree-node.\nPulled from the `item` object for this node.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 161,
+              "column": 6
+            },
+            "end": {
+              "line": 166,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "alternateTemplate",
+          "type": "Array",
           "description": "",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 130,
+              "line": 168,
               "column": 6
             },
             "end": {
-              "line": 135,
+              "line": 173,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "alternateOf",
+          "type": "Array",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 174,
+              "column": 6
+            },
+            "end": {
+              "line": 179,
               "column": 7
             }
           },
@@ -155,11 +235,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 141,
+              "line": 185,
               "column": 6
             },
             "end": {
-              "line": 144,
+              "line": 188,
               "column": 7
             }
           },
@@ -175,11 +255,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 150,
+              "line": 194,
               "column": 6
             },
             "end": {
-              "line": 153,
+              "line": 197,
               "column": 7
             }
           },
@@ -195,11 +275,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 160,
+              "line": 204,
               "column": 6
             },
             "end": {
-              "line": 165,
+              "line": 209,
               "column": 7
             }
           },
@@ -215,11 +295,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 171,
+              "line": 215,
               "column": 6
             },
             "end": {
-              "line": 174,
+              "line": 218,
               "column": 7
             }
           },
@@ -235,11 +315,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 180,
+              "line": 224,
               "column": 6
             },
             "end": {
-              "line": 183,
+              "line": 227,
               "column": 7
             }
           },
@@ -255,11 +335,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 189,
+              "line": 233,
               "column": 6
             },
             "end": {
-              "line": 192,
+              "line": 236,
               "column": 7
             }
           },
@@ -275,11 +355,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 198,
+              "line": 242,
               "column": 6
             },
             "end": {
-              "line": 201,
+              "line": 245,
               "column": 7
             }
           },
@@ -289,89 +369,93 @@
           "defaultValue": "null"
         },
         {
-          "name": "part",
+          "name": "nonGePart",
           "type": "boolean",
           "description": "Whether or not Non-GE part icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 206,
+              "line": 250,
               "column": 6
             },
             "end": {
-              "line": 210,
+              "line": 255,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "observer": "\"_hidePartsIcon\""
             }
           },
           "defaultValue": "true"
         },
         {
-          "name": "missing",
+          "name": "missingPart",
           "type": "boolean",
           "description": "Whether or not part missing icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 215,
+              "line": 260,
               "column": 6
             },
             "end": {
-              "line": 219,
+              "line": 265,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "observer": "\"_hidePartsIcon\""
             }
           },
           "defaultValue": "true"
         },
         {
-          "name": "mismatch",
+          "name": "quantityMismatch",
           "type": "boolean",
           "description": "Whether or not quantity mismatch icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 224,
+              "line": 270,
               "column": 6
             },
             "end": {
-              "line": 228,
+              "line": 275,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "observer": "\"_hidePartsIcon\""
             }
           },
           "defaultValue": "true"
         },
         {
-          "name": "alternate",
+          "name": "alternateParts",
           "type": "boolean",
           "description": "Whether or not quantity alternate parts icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 233,
+              "line": 280,
               "column": 6
             },
             "end": {
-              "line": 237,
+              "line": 285,
               "column": 7
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "observer": "\"_hidePartsIcon\""
             }
           },
           "defaultValue": "true"
@@ -483,17 +567,69 @@
           "inheritedFrom": "PxTreeBehavior"
         },
         {
+          "name": "_alternateTemplateArray",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "px-tree-behavior.html",
+            "start": {
+              "line": 63,
+              "column": 6
+            },
+            "end": {
+              "line": 70,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "item"
+            },
+            {
+              "name": "key"
+            }
+          ],
+          "inheritedFrom": "PxTreeBehavior"
+        },
+        {
+          "name": "_alternateOfArray",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "px-tree-behavior.html",
+            "start": {
+              "line": 77,
+              "column": 6
+            },
+            "end": {
+              "line": 84,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "item"
+            },
+            {
+              "name": "key"
+            }
+          ],
+          "inheritedFrom": "PxTreeBehavior"
+        },
+        {
           "name": "_isItemActive",
           "description": "Calculates whether the specified item is present in the active path.",
           "privacy": "protected",
           "sourceRange": {
             "file": "px-tree-behavior.html",
             "start": {
-              "line": 60,
+              "line": 88,
               "column": 6
             },
             "end": {
-              "line": 66,
+              "line": 94,
               "column": 7
             }
           },
@@ -521,11 +657,11 @@
           "sourceRange": {
             "file": "px-tree-behavior.html",
             "start": {
-              "line": 70,
+              "line": 98,
               "column": 6
             },
             "end": {
-              "line": 76,
+              "line": 104,
               "column": 7
             }
           },
@@ -549,11 +685,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 244,
+              "line": 293,
               "column": 4
             },
             "end": {
-              "line": 246,
+              "line": 295,
               "column": 5
             }
           },
@@ -565,37 +701,16 @@
           ]
         },
         {
-          "name": "join",
-          "description": "",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 247,
-              "column": 4
-            },
-            "end": {
-              "line": 249,
-              "column": 5
-            }
-          },
-          "metadata": {},
-          "params": [
-            {
-              "name": "metadata"
-            }
-          ]
-        },
-        {
           "name": "_getIcon",
           "description": "Calculates whether to display the chevron for an expanded node\nor a collapsed node given the current active path.",
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 254,
+              "line": 300,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 302,
               "column": 5
             }
           },
@@ -612,11 +727,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 260,
+              "line": 306,
               "column": 4
             },
             "end": {
-              "line": 274,
+              "line": 320,
               "column": 5
             }
           },
@@ -642,11 +757,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 279,
+              "line": 325,
               "column": 4
             },
             "end": {
-              "line": 297,
+              "line": 343,
               "column": 5
             }
           },
@@ -656,6 +771,27 @@
               "name": "evt"
             }
           ]
+        },
+        {
+          "name": "_hidePartsIcon",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 345,
+              "column": 4
+            },
+            "end": {
+              "line": 353,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "data"
+            }
+          ]
         }
       ],
       "staticMethods": [],
@@ -663,11 +799,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 72,
+          "line": 84,
           "column": 10
         },
         "end": {
-          "line": 298,
+          "line": 354,
           "column": 3
         }
       },
@@ -697,11 +833,11 @@
           "description": "Label to display in the body of the node.\nPulled from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 87,
+              "line": 99,
               "column": 6
             },
             "end": {
-              "line": 90,
+              "line": 102,
               "column": 7
             }
           },
@@ -713,11 +849,43 @@
           "description": "Description to display in the body of the node.\nPulled from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 107,
               "column": 6
             },
             "end": {
-              "line": 98,
+              "line": 110,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "alternate",
+          "description": "Alternate to display in the body of the node.\nPulled from the `item` object for this node.",
+          "sourceRange": {
+            "start": {
+              "line": 115,
+              "column": 6
+            },
+            "end": {
+              "line": 118,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "alternate-of-template",
+          "description": "Alternate of to display in the body of the node.\nPulled from the `item` object for this node.",
+          "sourceRange": {
+            "start": {
+              "line": 123,
+              "column": 6
+            },
+            "end": {
+              "line": 126,
               "column": 7
             }
           },
@@ -729,11 +897,11 @@
           "description": "Whether or not the node can be expanded to display children.\nCalculated from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 103,
+              "line": 131,
               "column": 6
             },
             "end": {
-              "line": 106,
+              "line": 134,
               "column": 7
             }
           },
@@ -745,11 +913,11 @@
           "description": "An object reference for the item associated with the node.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 112,
+              "line": 140,
               "column": 6
             },
             "end": {
-              "line": 117,
+              "line": 145,
               "column": 7
             }
           },
@@ -761,11 +929,11 @@
           "description": "The array of child items associated with this px-tree-node.\nPulled from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 123,
+              "line": 151,
               "column": 6
             },
             "end": {
-              "line": 128,
+              "line": 156,
               "column": 7
             }
           },
@@ -774,14 +942,46 @@
         },
         {
           "name": "metadata",
-          "description": "",
+          "description": "The array of metadata items associated with this px-tree-node.\nPulled from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 130,
+              "line": 161,
               "column": 6
             },
             "end": {
-              "line": 135,
+              "line": 166,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
+          "name": "alternate-template",
+          "description": "",
+          "sourceRange": {
+            "start": {
+              "line": 168,
+              "column": 6
+            },
+            "end": {
+              "line": 173,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
+          "name": "alternate-of",
+          "description": "",
+          "sourceRange": {
+            "start": {
+              "line": 174,
+              "column": 6
+            },
+            "end": {
+              "line": 179,
               "column": 7
             }
           },
@@ -793,11 +993,11 @@
           "description": "Whether or not the node is currently expanded (activated).\nCalculated from the activated logic of the overall tree.",
           "sourceRange": {
             "start": {
-              "line": 141,
+              "line": 185,
               "column": 6
             },
             "end": {
-              "line": 144,
+              "line": 188,
               "column": 7
             }
           },
@@ -809,11 +1009,11 @@
           "description": "Whether or not the node is currently selected.\nCalculated from the selected logic of the overall tree.",
           "sourceRange": {
             "start": {
-              "line": 150,
+              "line": 194,
               "column": 6
             },
             "end": {
-              "line": 153,
+              "line": 197,
               "column": 7
             }
           },
@@ -825,11 +1025,11 @@
           "description": "Changes the item properties (keys) that will be used\ninternally to find each item's unique id, label, children list, and icon.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 160,
+              "line": 204,
               "column": 6
             },
             "end": {
-              "line": 165,
+              "line": 209,
               "column": 7
             }
           },
@@ -841,11 +1041,11 @@
           "description": "Whether or not multiple nodes can be selected at a time.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 171,
+              "line": 215,
               "column": 6
             },
             "end": {
-              "line": 174,
+              "line": 218,
               "column": 7
             }
           },
@@ -857,11 +1057,11 @@
           "description": "Whether or not multiple nodes can be expanded (activated) at a time.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 180,
+              "line": 224,
               "column": 6
             },
             "end": {
-              "line": 183,
+              "line": 227,
               "column": 7
             }
           },
@@ -873,11 +1073,11 @@
           "description": "The icon to display next to this particular node in the tree.\nScraped from the `item` object for this node.",
           "sourceRange": {
             "start": {
-              "line": 189,
+              "line": 233,
               "column": 6
             },
             "end": {
-              "line": 192,
+              "line": 236,
               "column": 7
             }
           },
@@ -889,11 +1089,11 @@
           "description": "Internal boolean that is flipped when children are updated in the asset\ngraph, triggering data binding to show them in the tree.",
           "sourceRange": {
             "start": {
-              "line": 198,
+              "line": 242,
               "column": 6
             },
             "end": {
-              "line": 201,
+              "line": 245,
               "column": 7
             }
           },
@@ -901,15 +1101,15 @@
           "type": "boolean"
         },
         {
-          "name": "part",
+          "name": "non-ge-part",
           "description": "Whether or not Non-GE part icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 206,
+              "line": 250,
               "column": 6
             },
             "end": {
-              "line": 210,
+              "line": 255,
               "column": 7
             }
           },
@@ -917,15 +1117,15 @@
           "type": "boolean"
         },
         {
-          "name": "missing",
+          "name": "missing-part",
           "description": "Whether or not part missing icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 215,
+              "line": 260,
               "column": 6
             },
             "end": {
-              "line": 219,
+              "line": 265,
               "column": 7
             }
           },
@@ -933,15 +1133,15 @@
           "type": "boolean"
         },
         {
-          "name": "mismatch",
+          "name": "quantity-mismatch",
           "description": "Whether or not quantity mismatch icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 224,
+              "line": 270,
               "column": 6
             },
             "end": {
-              "line": 228,
+              "line": 275,
               "column": 7
             }
           },
@@ -949,15 +1149,15 @@
           "type": "boolean"
         },
         {
-          "name": "alternate",
+          "name": "alternate-parts",
           "description": "Whether or not quantity alternate parts icon used for tree comparison will be visible.\nPassed down recursively from the parent px-tree or parent px-tree-node.",
           "sourceRange": {
             "start": {
-              "line": 233,
+              "line": 280,
               "column": 6
             },
             "end": {
-              "line": 237,
+              "line": 285,
               "column": 7
             }
           },
@@ -974,26 +1174,26 @@
         },
         {
           "type": "CustomEvent",
-          "name": "part-changed",
-          "description": "Fired when the `part` property changes.",
+          "name": "non-ge-part-changed",
+          "description": "Fired when the `nonGePart` property changes.",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
-          "name": "missing-changed",
-          "description": "Fired when the `missing` property changes.",
+          "name": "missing-part-changed",
+          "description": "Fired when the `missingPart` property changes.",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
-          "name": "mismatch-changed",
-          "description": "Fired when the `mismatch` property changes.",
+          "name": "quantity-mismatch-changed",
+          "description": "Fired when the `quantityMismatch` property changes.",
           "metadata": {}
         },
         {
           "type": "CustomEvent",
-          "name": "alternate-changed",
-          "description": "Fired when the `alternate` property changes.",
+          "name": "alternate-parts-changed",
+          "description": "Fired when the `alternateParts` property changes.",
           "metadata": {}
         }
       ],
@@ -1286,11 +1486,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 98,
+              "line": 101,
               "column": 6
             },
             "end": {
-              "line": 101,
+              "line": 104,
               "column": 7
             }
           },
@@ -1306,11 +1506,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 79,
+              "line": 82,
               "column": 6
             },
             "end": {
-              "line": 83,
+              "line": 86,
               "column": 7
             }
           },
@@ -1328,11 +1528,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 88,
+              "line": 91,
               "column": 6
             },
             "end": {
-              "line": 92,
+              "line": 95,
               "column": 7
             }
           },
@@ -1350,11 +1550,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 106,
+              "line": 109,
               "column": 6
             },
             "end": {
-              "line": 109,
+              "line": 112,
               "column": 7
             }
           },
@@ -1370,11 +1570,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 114,
+              "line": 117,
               "column": 6
             },
             "end": {
-              "line": 117,
+              "line": 120,
               "column": 7
             }
           },
@@ -2431,17 +2631,69 @@
           "inheritedFrom": "PxTreeBehavior"
         },
         {
+          "name": "_alternateTemplateArray",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "px-tree-behavior.html",
+            "start": {
+              "line": 63,
+              "column": 6
+            },
+            "end": {
+              "line": 70,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "item"
+            },
+            {
+              "name": "key"
+            }
+          ],
+          "inheritedFrom": "PxTreeBehavior"
+        },
+        {
+          "name": "_alternateOfArray",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "px-tree-behavior.html",
+            "start": {
+              "line": 77,
+              "column": 6
+            },
+            "end": {
+              "line": 84,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "item"
+            },
+            {
+              "name": "key"
+            }
+          ],
+          "inheritedFrom": "PxTreeBehavior"
+        },
+        {
           "name": "_isItemActive",
           "description": "Calculates whether the specified item is present in the active path.",
           "privacy": "protected",
           "sourceRange": {
             "file": "px-tree-behavior.html",
             "start": {
-              "line": 60,
+              "line": 88,
               "column": 6
             },
             "end": {
-              "line": 66,
+              "line": 94,
               "column": 7
             }
           },
@@ -2469,11 +2721,11 @@
           "sourceRange": {
             "file": "px-tree-behavior.html",
             "start": {
-              "line": 70,
+              "line": 98,
               "column": 6
             },
             "end": {
-              "line": 76,
+              "line": 104,
               "column": 7
             }
           },
@@ -2492,16 +2744,33 @@
           "inheritedFrom": "PxTreeBehavior"
         },
         {
+          "name": "ready",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 122,
+              "column": 4
+            },
+            "end": {
+              "line": 124,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
           "name": "_activateAll",
           "description": "When expanding all the tree items on Expand All click\nthe method is invoked.",
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 123,
+              "line": 129,
               "column": 4
             },
             "end": {
-              "line": 145,
+              "line": 173,
               "column": 5
             }
           },
@@ -2518,11 +2787,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 150,
+              "line": 178,
               "column": 4
             },
             "end": {
-              "line": 169,
+              "line": 222,
               "column": 5
             }
           },
@@ -2539,11 +2808,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 173,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 175,
+              "line": 228,
               "column": 5
             }
           },
@@ -2560,11 +2829,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 179,
+              "line": 232,
               "column": 4
             },
             "end": {
-              "line": 187,
+              "line": 241,
               "column": 5
             }
           },
@@ -2584,11 +2853,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 191,
+              "line": 245,
               "column": 4
             },
             "end": {
-              "line": 197,
+              "line": 255,
               "column": 5
             }
           },
@@ -2605,11 +2874,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 199,
+              "line": 256,
               "column": 4
             },
             "end": {
-              "line": 210,
+              "line": 268,
               "column": 5
             }
           },
@@ -2625,15 +2894,15 @@
         },
         {
           "name": "_handleChildrenUpdated",
-          "description": "},",
+          "description": "",
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 230,
+              "line": 269,
               "column": 4
             },
             "end": {
-              "line": 233,
+              "line": 272,
               "column": 5
             }
           },
@@ -2650,11 +2919,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 234,
+              "line": 273,
               "column": 4
             },
             "end": {
-              "line": 277,
+              "line": 316,
               "column": 5
             }
           },
@@ -2676,11 +2945,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 59,
+          "line": 62,
           "column": 10
         },
         "end": {
-          "line": 278,
+          "line": 317,
           "column": 3
         }
       },
@@ -2836,11 +3105,11 @@
           "description": "If set to true, branches (nodes with children) will not be selectable.\nClicking on a branch will still cause it to become active (expand), but it\nwill not be added to the selected property.",
           "sourceRange": {
             "start": {
-              "line": 98,
+              "line": 101,
               "column": 6
             },
             "end": {
-              "line": 101,
+              "line": 104,
               "column": 7
             }
           },
@@ -2852,11 +3121,11 @@
           "description": "If set to true, multiple nodes can be selected at the same time in the tree\nby using the shift key (for selecting a range) or the ctrl/cmd key (for selecting individual nodes).",
           "sourceRange": {
             "start": {
-              "line": 79,
+              "line": 82,
               "column": 6
             },
             "end": {
-              "line": 83,
+              "line": 86,
               "column": 7
             }
           },
@@ -2868,11 +3137,11 @@
           "description": "If set to true, multiple nodes can be activated (expanded) at the same time.\nIf set to false, expanding a node will cause other nodes to automatically collapse.",
           "sourceRange": {
             "start": {
-              "line": 88,
+              "line": 91,
               "column": 6
             },
             "end": {
-              "line": 92,
+              "line": 95,
               "column": 7
             }
           },
@@ -3073,16 +3342,64 @@
               ]
             },
             {
+              "name": "_alternateTemplateArray",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 63,
+                  "column": 6
+                },
+                "end": {
+                  "line": 70,
+                  "column": 7
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "item"
+                },
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "name": "_alternateOfArray",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 77,
+                  "column": 6
+                },
+                "end": {
+                  "line": 84,
+                  "column": 7
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "item"
+                },
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
               "name": "_isItemActive",
               "description": "Calculates whether the specified item is present in the active path.",
               "privacy": "protected",
               "sourceRange": {
                 "start": {
-                  "line": 60,
+                  "line": 88,
                   "column": 6
                 },
                 "end": {
-                  "line": 66,
+                  "line": 94,
                   "column": 7
                 }
               },
@@ -3108,11 +3425,11 @@
               "privacy": "protected",
               "sourceRange": {
                 "start": {
-                  "line": 70,
+                  "line": 98,
                   "column": 6
                 },
                 "end": {
-                  "line": 76,
+                  "line": 104,
                   "column": 7
                 }
               },
@@ -3139,7 +3456,7 @@
               "column": 4
             },
             "end": {
-              "line": 77,
+              "line": 105,
               "column": 6
             }
           },
