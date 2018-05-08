@@ -234,7 +234,11 @@ Custom property | Description
       if (this._escapeStringRegExp(str).test(node.name) || this._escapeStringRegExp(str).test(node.label) ||
         (
           node.metadata && this._escapeStringRegExp(str).test(
-            node.metadata))) {
+            node.metadata)) || (
+          node.alternateTemplate && this._escapeStringRegExp(str).test(
+            node.alternateTemplate)) || (
+          node.alternateOfTemplate && this._escapeStringRegExp(str).test(
+            node.alternateOfTemplate))) {
         return true;
       }
       return false;
